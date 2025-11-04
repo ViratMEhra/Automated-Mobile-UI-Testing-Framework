@@ -1,0 +1,78 @@
+### ⚙️ pom.xml (Maven Dependencies)
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.mobile</groupId>
+    <artifactId>Automated-Mobile-UI-Testing-Framework</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.appium</groupId>
+            <artifactId>java-client</artifactId>
+            <version>9.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>4.22.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.9.0</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.2.5</version>
+            </plugin>
+        </plugins>
+    </build>
+</project>
+🧩 DriverManager.java
+java
+Copy code
+package com.mobile.base;
+
+import io.appium.java_client.android.AndroidDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import java.net.URL;
+
+public class DriverManager {
+    private static AndroidDriver driver;
+
+    public static AndroidDriver getDriver() {
+        if (driver == null) {
+            try {
+                DesiredCapabilities caps = new DesiredCapabilities();
+                caps.setCapability("platformName", "Android");
+                caps.setCapability("automationName", "UiAutomator2");
+                caps.setCapability("deviceName", "Pixel_4_API_35");
+                caps.setCapability("app", "C:\\Users\\hp\\Downloads\\DemoEcommerceApp.apk");
+                driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), caps);
+                System.out.println("✅ Appium session started successfully!");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        return driver;
+    }
+
+    public static void quitDriver() {
+        if (driver != null) {
+            driver.quit();
+            driver = null;
+        }
+    }
+}
