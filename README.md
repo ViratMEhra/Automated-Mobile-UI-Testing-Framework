@@ -1,34 +1,34 @@
-# 🧠 Mock E-Commerce API with Postman Testing
+# 🤖 Automated Mobile UI Testing Framework
 
-This project is a simple mock API built for an e-commerce platform to manage orders and payments.  
-I created it to practice how real-world APIs are designed, tested, and validated using **Postman**.  
-The goal was to simulate core operations like creating, updating, and deleting orders while ensuring each endpoint works correctly through automated Postman tests.
-
-## ⚙️ What’s Inside
-
-- 🧩 RESTful API built using **Node.js** and **Express**
-- ✅ Automated testing using **Postman**
-- 📦 Mock data for orders and payments
-- ⚡ Schema validation and error handling
-- 🚫 Negative test cases for invalid endpoints
+This project focuses on building a **scalable automated testing framework** for Android applications using **Appium**, **Selenium**, and **Java**.  
+It was designed to reduce repetitive manual testing and ensure consistent validation of mobile UI flows across different devices and app versions.
 
 
-## 🧪 Example Tests in Postman
+## 🎯 Objective
 
-Each request includes Postman test scripts to verify:
-- Response status codes (200, 201, 204, 404)
-- Response time (performance check)
-- JSON structure validation
-- Field presence (like `Order_id`, `status`, `total_amount`)
-- Proper error handling for invalid inputs
+To automate core user actions such as login, navigation, and checkout processes — ensuring faster regression cycles and improved test reliability.
 
 
-## 💻 Tech Stack
+## ⚙️ Key Features
 
-- **Node.js** – Backend server setup  
-- **Express.js** – API framework  
-- **Postman** – API testing and validation  
-- **JSON Schema Validator** – Ensures structured and consistent responses  
+- 🔁 **Reusable test scripts** for common UI interactions  
+- 🧩 **Modular framework** built using Java + TestNG  
+- ⚡ **Parallel test execution** using Appium Grid  
+- 🧠 **Maven** integration for dependency and build management  
+- 📊 **Jenkins** setup for CI/CD test automation  
+- 🧪 **20+ automated test cases** covering real-world scenarios  
+
+
+
+## 🧰 Tech Stack
+
+- **Programming Language:** Java  
+- **Testing Tools:** Appium, Selenium, TestNG, JUnit  
+- **Build Tool:** Maven  
+- **Execution Environment:** Android Emulator  
+- **CI/CD:** Jenkins  
+
+
 
 
 
