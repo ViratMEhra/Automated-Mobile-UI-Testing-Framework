@@ -13,10 +13,9 @@ To automate core user actions such as login, navigation, and checkout processes 
 
 - 🔁 **Reusable test scripts** for common UI interactions  
 - 🧩 **Modular framework** built using Java + TestNG  
-- ⚡ **Parallel test execution** using Appium Grid  
 - 🧠 **Maven** integration for dependency and build management  
 - 📊 **Jenkins** setup for CI/CD test automation  
-- 🧪 **20+ automated test cases** covering real-world scenarios  
+ 
 
 
 
