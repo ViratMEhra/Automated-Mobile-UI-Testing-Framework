@@ -37,3 +37,32 @@ public class DriverManager {
         }
     }
 }
+
+//LOGIN SCRIPTS
+package com.ecommerce.tests;
+import com.ecommerce.base.DriverManager;
+import io.appium.java_client.AppiumDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+public class LoginTest {
+
+    private AppiumDriver driver;
+
+    @BeforeClass
+    public void setUp() {
+        driver = DriverManager.getDriver();
+    }
+
+    @Test
+    public void testAppLaunch() {
+        System.out.println("✅ App launched successfully!");
+        System.out.println("Driver instance: " + driver);
+    }
+    @AfterClass
+    public void tearDown() {
+        DriverManager.quitDriver();
+    }
+}
